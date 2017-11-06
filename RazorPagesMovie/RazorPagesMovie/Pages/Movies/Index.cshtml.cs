@@ -30,7 +30,7 @@ namespace RazorPagesMovie.Pages.Movies
                 movies = movies.Where(s => s.Title.Contains(searchString));
             }
 
-            Movie = await _context.Movie.ToListAsync();
+            Movie = await movies.ToListAsync();
         }
     }
 }
